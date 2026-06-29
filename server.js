@@ -1,6 +1,9 @@
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
+const userRoutes = require("./routes/userRoutes");
+const errorHandler = require("./middleware/errorHandler");
+
 
 dotenv.config();
 
@@ -23,6 +26,9 @@ app.get("/", (req, res) => {
   });
 });
 
+app.use("/users", userRoutes);
+
+app.use(errorHandler);
 // Server Port
 const PORT = process.env.PORT || 5000;
 
