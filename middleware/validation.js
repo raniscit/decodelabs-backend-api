@@ -1,4 +1,4 @@
-const users = require("../data/users");
+const users = require("../data/user")
 
 /**
  * Validate user data before creating a user

@@ -1,5 +1,4 @@
-const users = require("../data/users");
-
+const users = require("../data/user")
 /**
  * @desc Get all users
  * @route GET /users
